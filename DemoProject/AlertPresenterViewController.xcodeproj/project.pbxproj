@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0EE538FE1B83C7B20029364B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE538FD1B83C7B20029364B /* AppDelegate.swift */; };
-		0EE539001B83C7B20029364B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE538FF1B83C7B20029364B /* ViewController.swift */; };
+		0EE539001B83C7B20029364B /* ViewControllerSubclass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE538FF1B83C7B20029364B /* ViewControllerSubclass.swift */; };
 		0EE539031B83C7B20029364B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EE539011B83C7B20029364B /* Main.storyboard */; };
 		0EE539051B83C7B20029364B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0EE539041B83C7B20029364B /* Images.xcassets */; };
 		0EE539081B83C7B20029364B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0EE539061B83C7B20029364B /* LaunchScreen.xib */; };
@@ -16,6 +16,7 @@
 		0EE539261B83E9B80029364B /* AlertControllerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE539231B83E9B80029364B /* AlertControllerManager.swift */; };
 		0EE539271B83E9B80029364B /* AlertPresenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE539241B83E9B80029364B /* AlertPresenterViewController.swift */; };
 		0EE539281B83E9B80029364B /* PresentAlertOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE539251B83E9B80029364B /* PresentAlertOperation.swift */; };
+		0EE5392A1B83EDD70029364B /* ViewControllerWithoutSubclass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE539291B83EDD70029364B /* ViewControllerWithoutSubclass.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,7 +33,7 @@
 		0EE538F81B83C7B20029364B /* AlertPresenterViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlertPresenterViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EE538FC1B83C7B20029364B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0EE538FD1B83C7B20029364B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0EE538FF1B83C7B20029364B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0EE538FF1B83C7B20029364B /* ViewControllerSubclass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerSubclass.swift; sourceTree = "<group>"; };
 		0EE539021B83C7B20029364B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0EE539041B83C7B20029364B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		0EE539071B83C7B20029364B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -42,6 +43,7 @@
 		0EE539231B83E9B80029364B /* AlertControllerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertControllerManager.swift; sourceTree = "<group>"; };
 		0EE539241B83E9B80029364B /* AlertPresenterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertPresenterViewController.swift; sourceTree = "<group>"; };
 		0EE539251B83E9B80029364B /* PresentAlertOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentAlertOperation.swift; sourceTree = "<group>"; };
+		0EE539291B83EDD70029364B /* ViewControllerWithoutSubclass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerWithoutSubclass.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,7 +87,8 @@
 			isa = PBXGroup;
 			children = (
 				0EE538FD1B83C7B20029364B /* AppDelegate.swift */,
-				0EE538FF1B83C7B20029364B /* ViewController.swift */,
+				0EE538FF1B83C7B20029364B /* ViewControllerSubclass.swift */,
+				0EE539291B83EDD70029364B /* ViewControllerWithoutSubclass.swift */,
 				0EE539011B83C7B20029364B /* Main.storyboard */,
 				0EE539041B83C7B20029364B /* Images.xcassets */,
 				0EE539061B83C7B20029364B /* LaunchScreen.xib */,
@@ -232,7 +235,8 @@
 			files = (
 				0EE539281B83E9B80029364B /* PresentAlertOperation.swift in Sources */,
 				0EE539271B83E9B80029364B /* AlertPresenterViewController.swift in Sources */,
-				0EE539001B83C7B20029364B /* ViewController.swift in Sources */,
+				0EE539001B83C7B20029364B /* ViewControllerSubclass.swift in Sources */,
+				0EE5392A1B83EDD70029364B /* ViewControllerWithoutSubclass.swift in Sources */,
 				0EE539261B83E9B80029364B /* AlertControllerManager.swift in Sources */,
 				0EE538FE1B83C7B20029364B /* AppDelegate.swift in Sources */,
 			);

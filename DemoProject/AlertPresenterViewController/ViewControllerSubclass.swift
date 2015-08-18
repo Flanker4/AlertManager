@@ -13,9 +13,9 @@ class ViewController: AlertPresenterViewController {
         self.presentAlertController(self.tmpAlertController(1))
         self.presentAlertController(self.tmpAlertController(2)).cancel()
         self.presentAlertController(self.tmpAlertController(3)).completionBlock = {
-            print("3 dismissed")
+            self.presentViewController(ViewControllerWithoutSubclass(), animated: true, completion: nil)
         }
-        self.presentAlertController(self.tmpAlertController(4))
+        
     }
     
     func tmpAlertController(number: Int) -> UIAlertController {

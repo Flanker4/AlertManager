@@ -9,7 +9,8 @@
 import UIKit
 
 final class AlertControllerManager {
-    
+    static let sharedAlertManager = AlertControllerManager()
+
     //
     //MARK: - Private
     //
