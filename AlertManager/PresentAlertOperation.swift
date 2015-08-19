@@ -8,7 +8,16 @@
 import UIKit
 
 final class PresentAlertOperation: NSOperation {
+    //
+    //MARK: - Private
+    //
+    private var _finished = false
+    private var _executing = false
     
+    private var      _alertController: UIAlertController!
+    private weak var _presenterViewController: UIViewController?
+    private var      _animationFlag:Bool
+    private var      _completionAnimationBlock: (() -> Void)?
     
     //
     //MARK: - Init
@@ -30,21 +39,8 @@ final class PresentAlertOperation: NSOperation {
     }
     
     //
-    //MARK: - Private
-    //
-    private var _finished = false
-    private var _executing = false
-
-    private var      _alertController: UIAlertController!
-    private weak var _presenterViewController: UIViewController!
-    private var      _animationFlag:Bool
-    private var      _completionAnimationBlock: (() -> Void)?
-    
-    
-    //
     //MARK: - Override
     //
-    override var ready:         Bool { return true }
     override var asynchronous:  Bool { return true }
 
     override var executing:Bool {
@@ -72,7 +68,7 @@ final class PresentAlertOperation: NSOperation {
             self.finish()
             return
         }
-        _presenterViewController.presentViewController(_alertController,
+        _presenterViewController?.presentViewController(_alertController,
             animated: _animationFlag,
             completion: _completionAnimationBlock)
     }
@@ -93,5 +89,7 @@ final class PresentAlertOperation: NSOperation {
         }
     }
     
-    
+    final func isEqualPresenter(operation:PresentAlertOperation) -> Bool {
+        return (operation._presenterViewController == _presenterViewController);
+    }
 }

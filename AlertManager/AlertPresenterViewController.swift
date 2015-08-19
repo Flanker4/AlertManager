@@ -30,10 +30,9 @@ class AlertPresenterViewController: UIViewController {
             }
             completion?()
         }
-        
     }
 
-
+    
 
 }
 
