@@ -16,7 +16,7 @@ class ViewControllerWithoutSubclass: UIViewController {
     override func viewWillAppear(animated: Bool) {
         let alertManager = AlertControllerManager.sharedAlertManager;
         alertManager.presentAlertController(self.tmpAlertController(1), inViewController: self);
-        alertManager.presentAlertController(self.tmpAlertController(2), inViewController: self).completionBlock = {
+        alertManager.presentAlertController(self.tmpAlertController(2)).completionBlock = {
             self.presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
         }
     }

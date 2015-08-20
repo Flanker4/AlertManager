@@ -10,7 +10,14 @@ import UIKit
 
 final class AlertControllerManager {
     static let sharedAlertManager = AlertControllerManager()
-    
+    var defaultPresenterViewController:UIViewController?{
+        var rootViewController = UIApplication.sharedApplication().delegate?.window??.rootViewController;
+        
+        while let topVC = rootViewController?.presentedViewController {
+            rootViewController = topVC;
+        }
+        return rootViewController;
+    }
     //
     //MARK: - Private
     //
@@ -40,6 +47,19 @@ final class AlertControllerManager {
     //
     //MARK: - Public
     //
+    final func presentAlertController(alertController: UIAlertController,
+                                             animated: Bool = true,
+                                           completion: (() -> Void)? = nil) -> NSOperation
+    {
+        if let presenter = self.defaultPresenterViewController {
+            return self.presentAlertController(alertController, inViewController:presenter,
+                animated: animated,
+                completion: completion);
+        }else{
+            assert(false, "Default presenter not found. Please set default presenter. See defaultPresenterViewController");
+            return NSOperation();
+        }
+    }
     final func presentAlertController(alertController: UIAlertController,
                                      inViewController: UIViewController,
                                              animated: Bool = true,
